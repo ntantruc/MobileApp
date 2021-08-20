@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:BomNuoc.Converters;assembly=BomNuoc"
+             xmlns:vm="clr-namespace:BomNuoc.ViewModels;assembly=BomNuoc" 
+             xmlns:c="clr-namespace:BomNuoc.Controls;assembly=BomNuoc"
+             x:Class="BomNuoc.Contents.WaterLevelSetting">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:CalcConverter x:Key="calc" />
+            <converters:MarginConverter x:Key="margin" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid Padding="0,2,0,0" BackgroundColor="Blue">
+        <Grid.RowDefinitions>
+            <RowDefinition>
+                <RowDefinition.Height>
+                    <OnPlatform x:TypeArguments="GridLength">
+                        <On Platform="Windows, WinPhone, UWP">Auto</On>
+                        <On Platform="Android">
+                            <OnIdiom x:TypeArguments="GridLength" Phone="0" Tablet="Auto" />
+                        </On>
+                        <On Platform="iOS">
+                            <OnIdiom x:TypeArguments="GridLength" Phone="Auto" Tablet="Auto" />
+                        </On>
+                    </OnPlatform>
+                </RowDefinition.Height>
+            </RowDefinition>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>      
+        <!--<ScrollView Orientation="Horizontal" Grid.Row="1">-->
+        <ScrollView  Grid.Row="1" Orientation="Vertical">            <!--<StackLayout Orientation="Vertical" Padding="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='3,3,3,3'}" Spacing="0">-->
+            <StackLayout Orientation="Vertical"  Spacing="0">
+                <!-- Tên hợp tác xã -->
+                <StackLayout Orientation="Horizontal" Margin="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='0,0,0,6'}" >
+                    <Label x:Name="CooperativeName" Text="TÊN HỢP TÁC XÃ" TextColor="White" FontSize="{Binding c14,Source={x:Static vm:calc.i}}" />
+                    <Label x:Name="CompanyName" Text="" TextColor="White" HorizontalOptions="End" />
+                </StackLayout>
+                <ScrollView Orientation="Vertical">
+                    <!--<Grid ColumnSpacing="0" RowSpacing="0" BackgroundColor="WhiteSmoke" Padding="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='2,2,2,0'}" VerticalOptions="Start" HorizontalOptions="Start">-->
+                    <Grid ColumnSpacing="0" RowSpacing="0" BackgroundColor="#FAFAD2"  VerticalOptions="Start" HorizontalOptions="Start">
+                    <Grid.RowDefinitions>
+                            <RowDefinition Height="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=10}" />
+                            <RowDefinition Height="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=60}" />
+                            <RowDefinition Height="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=60}" />
+                            <RowDefinition Height="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=60}" />
+                            <RowDefinition Height="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=60}" />
+                            <RowDefinition Height="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=60}" />
+                            <RowDefinition Height="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=60}" />
+                            <RowDefinition Height="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=100}" />
+                        </Grid.RowDefinitions>                        
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="7*" />
+                            <ColumnDefinition Width="7*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!--            HTX name - Cài đặt thông số
+                          Mực nước muốn tưới: ...
+                          Thời gian giới hạn tưới tối đa: ...
+                        
+                          Button cài đặt                        
+                          -->
+                        
+                        <Label Grid.Row="2" Grid.Column="1"  Text="Thông tin cánh đồng:"  Margin="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='6,5,6,5'}"   />
+                        <Editor  Grid.Row="2" Grid.Column="2" x:Name="FieldDescription"  BackgroundColor="White" WidthRequest="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=30}" Margin="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='0,5,0,5'}"/>
+                        <Label Grid.Row="3" Grid.Column="1"  Text="Chọn mực nước muốn tưới(cm):"  Margin="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='6,5,6,5'}"   />
+                        <Picker Grid.Row="3" Grid.Column="2" x:Name="SelecteWaterLevel" BackgroundColor="RosyBrown" Margin="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='6,5,6,5'}" >
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>1 cm</x:String>
+                                    <x:String>2 cm</x:String>
+                                    <x:String>3 cm</x:String>
+                                    <x:String>4 cm</x:String>
+                                    <x:String>5 cm</x:String>
+                                    <x:String>6 cm</x:String>
+                                    <x:String>7 cm</x:String>
+                                    <x:String>8 cm</x:String>
+                                    <x:String>9 cm</x:String>
+                                    <x:String>10 cm</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        <!--  <Label Grid.Row="4" Grid.Column="1"  Text="Thời gian giới hạn tưới tối đa(giờ):"  Margin="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='6,5,6,5'}"   />-->
+                        <Label Grid.Row="4" Grid.Column="1"  Text="Thời gian giới hạn tưới tối đa(giờ):"  Margin="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='6,5,6,5'}"   />
+                        <Picker Grid.Row="4" Grid.Column="2" x:Name="LimitedWateringTime" BackgroundColor="RosyBrown" Margin="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='6,5,6,5'}">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>1 giờ</x:String>
+                                    <x:String>2 giờ</x:String>
+                                    <x:String>3 giờ</x:String>
+                                    <x:String>4 giờ</x:String>
+                                    <x:String>5 giờ</x:String>
+                                    <x:String>6 giờ</x:String>
+                                    <x:String>7 giờ</x:String>
+                                    <x:String>8 giờ</x:String>
+                                    <x:String>9 giờ</x:String>
+                                    <x:String>10 giờ</x:String>
+                                    <x:String>11 giờ</x:String>
+                                    <x:String>12 giờ</x:String>
+                                    <x:String>13 giờ</x:String>
+                                    <x:String>14 giờ</x:String>
+                                    <x:String>15 giờ</x:String>
+                                    <x:String>16 giờ</x:String>
+                                    <x:String>17 giờ</x:String>
+                                    <x:String>18 giờ</x:String>
+                                    <x:String>19 giờ</x:String>
+                                    <x:String>20 giờ</x:String>
+                                    <x:String>21 giờ</x:String>
+                                    <x:String>22 giờ</x:String>
+                                    <x:String>25 giờ</x:String>
+                                    <x:String>30 giờ</x:String>
+                                    <x:String>35 giờ</x:String>
+                                    <x:String>40 giờ</x:String>
+                                    <x:String>45 giờ</x:String>
+                                    <x:String>50 giờ</x:String>
+                                    <x:String>55 giờ</x:String>
+                                    <x:String>60 giờ</x:String>
+                                    <x:String>65 giờ</x:String>
+                                    <x:String>100 giờ</x:String>
+                                    <x:String>150 giờ</x:String>
+                                    <x:String>240 giờ</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+
+                        <Label Grid.Row="5" Grid.Column="1"  Text="Độ sâu mực nước sông tối thiểu để tưới (m):"  Margin="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='6,5,6,5'}"   />
+                        <Picker Grid.Row="5" Grid.Column="2" x:Name="RiverLevel" BackgroundColor="RosyBrown" Margin="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='6,5,6,5'}">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>1 mét</x:String>
+                                    <x:String>1.25 mét</x:String>
+                                    <x:String>1.5 mét</x:String>
+                                    <x:String>1.75 mét</x:String>
+                                    <x:String>2 mét</x:String>
+                                    <x:String>2.25 mét</x:String>
+                                    <x:String>2.5 mét</x:String>
+                                    <x:String>2.75 mét</x:String>
+                                    <x:String>3 mét</x:String>
+                                    <x:String>3.25 mét</x:String>
+                                    <x:String>3.5 mét</x:String>
+                                    <x:String>3.75 mét</x:String>                                    
+                                    <x:String>4 mét</x:String>
+                                    <x:String>5 mét</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+
+                        <Button  Grid.Row="6" Grid.Column="1"  Text="Cài đặt" IsEnabled="{Binding SettingButtonEnable}" Margin="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='6,5,6,5'}" Clicked="SettingButton_Clicked"/>
+                    </Grid>
+                </ScrollView>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>

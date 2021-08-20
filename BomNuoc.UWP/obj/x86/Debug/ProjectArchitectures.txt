@@ -1,0 +1,4 @@
+E:\PhongDatSolutions\2020.7 PumpWateringController\BomNuoc\BomNuoc\BomNuoc.UWP\BomNuoc.UWP.csproj;x86
+E:\PhongDatSolutions\2020.7 PumpWateringController\BomNuoc\BomNuoc\Library\DataFileStream.UWP\DataFileStream.UWP.csproj;neutral
+E:\PhongDatSolutions\2020.7 PumpWateringController\BomNuoc\BomNuoc\Library\SQLite.UWP\SQLite.UWP.csproj;neutral
+E:\PhongDatSolutions\2020.7 PumpWateringController\BomNuoc\BomNuoc\Library\SSLClient.UWP\SSLClient.UWP.csproj;neutral

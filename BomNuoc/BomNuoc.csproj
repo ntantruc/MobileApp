@@ -1,0 +1,96 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\pdsolution_logo.jpg" />
+    <None Remove="Images\pdsolution_logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\pdsolution_logo.jpg" />
+    <EmbeddedResource Include="Images\pdsolution_logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="6.5.1" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Library\AssemblyService.Core\AssemblyService.Core.csproj" />
+    <ProjectReference Include="..\Library\DataFileStream.Core\DataFileStream.Core.csproj" />
+    <ProjectReference Include="..\Library\Generic\Generic.csproj" />
+    <ProjectReference Include="..\Library\MessagePack\MessagePack.csproj" />
+    <ProjectReference Include="..\Library\SQLite.Core\SQLite.Core.csproj" />
+    <ProjectReference Include="..\Library\SSLClient.Core\SSLClient.Core.csproj" />
+    <ProjectReference Include="..\Library\ZXing\ZXing.Net.Mobile.Core\ZXing.Net.Mobile.Core.csproj" />
+    <ProjectReference Include="..\Library\ZXing\ZXing.Net.Mobile.Forms\ZXing.Net.Mobile.Forms.csproj" />
+    <ProjectReference Include="..\Library\ZXing\ZXing.Net\Source\lib\zxing.portable.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Converters\" />
+    <Folder Include="Controls\" />
+    <Folder Include="CustomRenderers\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Contents\PDSInfo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Contents\ProfileSetting.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Contents\PumpControlList.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Contents\PumpRecords.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Contents\WaterLevelSetting.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Contents\LoginPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Contents\MainPagePC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Contents\MainPagePhone.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Contents\PDSInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Contents\ProfileSetting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Contents\PumpControlList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Contents\PumpRecords.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Contents\WaterLevelSetting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BomNuoc;assembly=BomNuoc"
+             xmlns:converters="clr-namespace:BomNuoc.Converters;assembly=BomNuoc"
+             xmlns:vm="clr-namespace:BomNuoc.ViewModels;assembly=BomNuoc"
+             xmlns:c="clr-namespace:BomNuoc.Controls;assembly=BomNuoc"
+             xmlns:cr="clr-namespace:BomNuoc.CustomRenderers;assembly=BomNuoc"
+             x:Class="BomNuoc.Contents.LoginPage" Title="Đăng Nhập">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:CalcConverter x:Key="calc" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid BackgroundColor="#FAFAD2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="88"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="1"  IsVisible="True" Source="{local:ImageResource BomNuoc.Images.pdsolution_logo.png}" Scale="0.5"  HeightRequest="88" WidthRequest="88"/>
+            <Label Grid.Column="2" Text="CÔNG TY TNHH GIẢI PHÁP PHONG ĐẠT" VerticalTextAlignment="Center" FontSize="Large"/>
+        </Grid>
+        <Grid x:Name="TopLayout"  Grid.Row="1" >
+
+            <ScrollView Orientation="Vertical" Margin="0" Padding="0">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout VerticalOptions="Center" Spacing="{Binding c20,Source={x:Static vm:calc.i}}" Grid.Row="1">
+                        <Image IsVisible="False" Source="{local:ImageResource BomNuoc.Images.pdsolution_logo.png}" WidthRequest="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=250}" HorizontalOptions="Center"/>
+                        <Label Text="CHƯƠNG TRÌNH ĐIỂU KHIỂN TRẠM MÁY BƠM" TextColor="Black" HorizontalOptions="Center" FontSize="Large"/>
+   
+                        <StackLayout HorizontalOptions="FillAndExpand" Spacing="0">
+                            <Entry Placeholder="Tên đăng nhập" x:Name="UserNameEntry" Keyboard="Email" HorizontalOptions="Center" WidthRequest="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=250}"/>
+                            <Entry Placeholder="Mật khẩu" x:Name="PasswordEntry" IsPassword="True" Keyboard="Email" HorizontalOptions="Center" WidthRequest="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=250}"/>
+                        </StackLayout>
+   
+<!--
+                        <StackLayout HorizontalOptions="FillAndExpand" Spacing="0">
+                            <Entry Placeholder="Tên đăng nhập" x:Name="UserNameEntry" Keyboard="Email" />
+                            <Entry Placeholder="Mật khẩu" x:Name="PasswordEntry" IsPassword="True" Keyboard="Email" />
+                        </StackLayout>
+-->
+                        <StackLayout Orientation="Vertical" Spacing="{Binding c10,Source={x:Static vm:calc.i}}" HorizontalOptions="Center">
+                            <StackLayout Orientation="Horizontal" Spacing="{Binding c5,Source={x:Static vm:calc.i}}">
+                                <Switch x:Name="UserNameSaveSwitch"  WidthRequest="100"/>                                
+                                <Label Text="Lưu đăng nhập" TextColor="Black" VerticalTextAlignment="Center"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Spacing="{Binding c5,Source={x:Static vm:calc.i}}" IsVisible="False">
+                                <Switch x:Name="AutoLoginSwitch" />
+                                <Label Text="Tự động đăng nhập" TextColor="Black"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="{Binding c30,Source={x:Static vm:calc.i}}">
+                            <Button x:Name="CancelButton" Text="Thoát" TextColor="White" BackgroundColor="#007ACC" BorderRadius="{Binding c15,Source={x:Static vm:calc.i}}" BorderColor="White" BorderWidth="{Binding c2,Source={x:Static vm:calc.i}}" HeightRequest="{Binding c40,Source={x:Static vm:calc.i}}" WidthRequest="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=150}" IsVisible="False"/>
+                            <Button x:Name="LoginButton" Clicked="LoginButton_Clicked" Text="Đăng nhập" TextColor="#007ACC" BackgroundColor="White" BorderRadius="{Binding c15,Source={x:Static vm:calc.i}}" HeightRequest="{Binding c40,Source={x:Static vm:calc.i}}" WidthRequest="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=170}"/>
+                        </StackLayout>
+                        <Button x:Name="ForgotButton" Text="Quên mật khẩu" TextColor="White" BackgroundColor="Transparent" BorderWidth="0" IsVisible="False"/>
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+        </Grid>
+    </Grid>
+    
+</ContentPage>

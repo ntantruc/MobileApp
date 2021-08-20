@@ -1,0 +1,12 @@
+﻿/ref:"E:\PhongDatSolutions\2020.7 PumpWateringController\BomNuoc\BomNuoc\BomNuoc.UWP\obj\x86\Release\ilc\intermediate\PreMergeILTransformed"
+/ref:"C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.native.sharedlibrary\2.1.8\tools\SharedLibrary\ret\AnalysisILToc"
+/ref:"E:\PhongDatSolutions\2020.7 PumpWateringController\BomNuoc\BomNuoc\BomNuoc.UWP\obj\x86\Release\ilc\intermediate\PreMergeILTransformed"
+/ref:"E:\PhongDatSolutions\2020.7 PumpWateringController\BomNuoc\BomNuoc\BomNuoc.UWP\obj\x86\Release\ilc\in\\"
+/ref:"C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.native.compiler\2.1.8\tools\x86\ilc\lib\Private\\"
+/ref:"E:\PhongDatSolutions\2020.7 PumpWateringController\BomNuoc\BomNuoc\BomNuoc.UWP\obj\x86\Release\ilc\in"
+/ref:"E:\PhongDatSolutions\2020.7 PumpWateringController\BomNuoc\BomNuoc\BomNuoc.UWP\obj\x86\Release\ilc\in\WinMetadata"
+/ca:System.Private.CoreLib
+/cscpath:"C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\microsoft.net.native.compiler\2.1.8\tools\csc"
+/out:"E:\PhongDatSolutions\2020.7 PumpWateringController\BomNuoc\BomNuoc\BomNuoc.UWP\obj\x86\Release\ilc\intermediate\SgGenerated\\"
+/int:"E:\PhongDatSolutions\2020.7 PumpWateringController\BomNuoc\BomNuoc\BomNuoc.UWP\obj\x86\Release\ilc\intermediate\BomNuoc.UWP.Sg"
+"@E:\PhongDatSolutions\2020.7 PumpWateringController\BomNuoc\BomNuoc\BomNuoc.UWP\obj\x86\Release\ilc\intermediate\BomNuoc.UWP.Sg\ComputedSerializationInput.txt"

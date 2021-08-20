@@ -1,0 +1,3 @@
+BomNuoc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  BomNuoc.Images.pdsolution_logo.jpg
+  BomNuoc.Images.pdsolution_logo.png

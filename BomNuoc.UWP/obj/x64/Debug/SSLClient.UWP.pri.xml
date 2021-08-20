@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="SSLClient.UWP" version="1.0" primary="true">
+		<Qualifiers/>
+		<ResourceMapSubtree name="Files">
+			<ResourceMapSubtree name="SSLClient.UWP">
+				<NamedResource name="esqlite3.dll" uri="ms-resource://SSLClient.UWP/Files/SSLClient.UWP/esqlite3.dll">
+					<Candidate type="Path">
+						<Value>SSLClient.UWP\esqlite3.dll</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

@@ -1,0 +1,235 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETStandard,Version=v2.0": {
+      "AssemblyService.Core/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/AssemblyService.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AssemblyService.Core.dll": {}
+        }
+      },
+      "DataFileStream.Core/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/DataFileStream.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataFileStream.Core.dll": {}
+        }
+      },
+      "Generic/1.0.0": {
+        "type": "project",
+        "framework": "Unsupported,Version=v0.0",
+        "compile": {
+          "bin/placeholder/Generic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Generic.dll": {}
+        }
+      },
+      "MessagePack/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/MessagePack.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MessagePack.dll": {}
+        }
+      },
+      "SQLite.Core/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/SQLite.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SQLite.Core.dll": {}
+        }
+      },
+      "SSLClient.Core/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/SSLClient.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SSLClient.Core.dll": {}
+        }
+      },
+      "ZXing.Net.Mobile.Core/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "zxing.portable": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ZXing.Net.Mobile.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ZXing.Net.Mobile.Core.dll": {}
+        }
+      },
+      "ZXing.Net.Mobile.Forms/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "ZXing.Net.Mobile.Core": "1.0.0",
+          "zxing.portable": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ZXing.Net.Mobile.Forms.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ZXing.Net.Mobile.Forms.dll": {}
+        }
+      },
+      "zxing.portable/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/zxing.portable.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/zxing.portable.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AssemblyService.Core/1.0.0": {
+      "type": "project",
+      "path": "../Library/AssemblyService.Core/AssemblyService.Core.csproj",
+      "msbuildProject": "../Library/AssemblyService.Core/AssemblyService.Core.csproj"
+    },
+    "DataFileStream.Core/1.0.0": {
+      "type": "project",
+      "path": "../Library/DataFileStream.Core/DataFileStream.Core.csproj",
+      "msbuildProject": "../Library/DataFileStream.Core/DataFileStream.Core.csproj"
+    },
+    "Generic/1.0.0": {
+      "type": "project",
+      "path": "../Library/Generic/project.json",
+      "msbuildProject": "../Library/Generic/Generic.csproj"
+    },
+    "MessagePack/1.0.0": {
+      "type": "project",
+      "path": "../Library/MessagePack/MessagePack.csproj",
+      "msbuildProject": "../Library/MessagePack/MessagePack.csproj"
+    },
+    "SQLite.Core/1.0.0": {
+      "type": "project",
+      "path": "../Library/SQLite.Core/SQLite.Core.csproj",
+      "msbuildProject": "../Library/SQLite.Core/SQLite.Core.csproj"
+    },
+    "SSLClient.Core/1.0.0": {
+      "type": "project",
+      "path": "../Library/SSLClient.Core/SSLClient.Core.csproj",
+      "msbuildProject": "../Library/SSLClient.Core/SSLClient.Core.csproj"
+    },
+    "ZXing.Net.Mobile.Core/1.0.0": {
+      "type": "project",
+      "path": "../Library/ZXing/ZXing.Net.Mobile.Core/ZXing.Net.Mobile.Core.csproj",
+      "msbuildProject": "../Library/ZXing/ZXing.Net.Mobile.Core/ZXing.Net.Mobile.Core.csproj"
+    },
+    "ZXing.Net.Mobile.Forms/1.0.0": {
+      "type": "project",
+      "path": "../Library/ZXing/ZXing.Net.Mobile.Forms/ZXing.Net.Mobile.Forms.csproj",
+      "msbuildProject": "../Library/ZXing/ZXing.Net.Mobile.Forms/ZXing.Net.Mobile.Forms.csproj"
+    },
+    "zxing.portable/1.0.0": {
+      "type": "project",
+      "path": "../Library/ZXing/ZXing.Net/Source/lib/zxing.portable.csproj",
+      "msbuildProject": "../Library/ZXing/ZXing.Net/Source/lib/zxing.portable.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETStandard,Version=v2.0": [
+      "AssemblyService.Core >= 1.0.0",
+      "DataFileStream.Core >= 1.0.0",
+      "Generic >= 1.0.0",
+      "MessagePack >= 1.0.0",
+      "SQLite.Core >= 1.0.0",
+      "SSLClient.Core >= 1.0.0",
+      "ZXing.Net.Mobile.Core >= 1.0.0",
+      "ZXing.Net.Mobile.Forms >= 1.0.0",
+      "zxing.portable >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\USER\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\BomNuoc\\BomNuoc.csproj",
+      "projectName": "BomNuoc",
+      "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\BomNuoc\\BomNuoc.csproj",
+      "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+      "outputPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\BomNuoc\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netstandard2.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "projectReferences": {
+            "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\AssemblyService.Core\\AssemblyService.Core.csproj": {
+              "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\AssemblyService.Core\\AssemblyService.Core.csproj"
+            },
+            "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\DataFileStream.Core\\DataFileStream.Core.csproj": {
+              "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\DataFileStream.Core\\DataFileStream.Core.csproj"
+            },
+            "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\Generic\\Generic.csproj": {
+              "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\Generic\\Generic.csproj"
+            },
+            "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\MessagePack\\MessagePack.csproj": {
+              "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\MessagePack\\MessagePack.csproj"
+            },
+            "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\SQLite.Core\\SQLite.Core.csproj": {
+              "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\SQLite.Core\\SQLite.Core.csproj"
+            },
+            "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\SSLClient.Core\\SSLClient.Core.csproj": {
+              "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\SSLClient.Core\\SSLClient.Core.csproj"
+            },
+            "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net.Mobile.Core\\ZXing.Net.Mobile.Core.csproj": {
+              "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net.Mobile.Core\\ZXing.Net.Mobile.Core.csproj"
+            },
+            "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net.Mobile.Forms\\ZXing.Net.Mobile.Forms.csproj": {
+              "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net.Mobile.Forms\\ZXing.Net.Mobile.Forms.csproj"
+            },
+            "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net\\Source\\lib\\zxing.portable.csproj": {
+              "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net\\Source\\lib\\zxing.portable.csproj"
+            }
+          }
+        }
+      }
+    },
+    "frameworks": {
+      "netstandard2.0": {}
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project Generic is not compatible with netstandard2.0 (.NETStandard,Version=v2.0). Project Generic supports: portable45-net45+win8 (.NETPortable,Version=v4.5,Profile=Profile7)",
+      "libraryId": "Generic",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
+}

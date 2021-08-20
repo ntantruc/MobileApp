@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BomNuoc;assembly=BomNuoc"
+             xmlns:converters="clr-namespace:BomNuoc.Converters;assembly=BomNuoc"
+             xmlns:vm="clr-namespace:BomNuoc.ViewModels;assembly=BomNuoc"
+             xmlns:c="clr-namespace:BomNuoc.Controls;assembly=BomNuoc"
+             xmlns:cr="clr-namespace:BomNuoc.CustomRenderers;assembly=BomNuoc"
+             x:Class="BomNuoc.Contents.MainPagePhone" IsPresented="False">
+    <MasterDetailPage.Resources>
+        <ResourceDictionary>
+            <converters:CalcConverter x:Key="calc" />
+            <converters:MarginConverter x:Key="margin" />
+        </ResourceDictionary>
+    </MasterDetailPage.Resources>
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu" BackgroundColor="#007ACC">
+            <StackLayout x:Name="TopLayout" BackgroundColor="#007ACC">
+                <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
+                    <StackLayout>
+                        <!--<Image Source="{local:ImageResource BomNuoc.Images.pdsolution_logo.jpg}" HorizontalOptions="StartAndExpand" HeightRequest="30" WidthRequest="30"/>-->
+                        <Label Text="Menu chức năng" TextColor="White"/>
+                        <c:ContentButton BackgroundColor="#4DB5B7" Padding="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='5,0,5,0'}" Margin="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='5,4,0,0'}" Clicked="PumpButton_Clicked" x:Name="PumpButton">
+                            <StackLayout Orientation="Horizontal" Spacing="{Binding c5,Source={x:Static vm:calc.i}}" HeightRequest="{Binding c40,Source={x:Static vm:calc.i}}">
+                                <Grid VerticalOptions="Center">
+                                    <c:IconLabel Icon="water" TextColor="White" FontSize="{Binding c20,Source={x:Static vm:calc.i}}" HorizontalOptions="End" VerticalOptions="Center"/>
+                                </Grid>
+                                <Label Text="Trang bơm tưới" FontSize="{Binding c14,Source={x:Static vm:calc.i}}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White"/>
+                            </StackLayout>
+                        </c:ContentButton>
+                        <c:ContentButton BackgroundColor="#4DB5B7" Padding="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='5,0,5,0'}" Margin="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='5,4,0,0'}" Clicked="PumpRecords_Clicked" x:Name="PumpRecordsButton">
+                            <StackLayout Orientation="Horizontal" Spacing="{Binding c5,Source={x:Static vm:calc.i}}" HeightRequest="{Binding c40,Source={x:Static vm:calc.i}}">
+                                <Grid VerticalOptions="Center">
+                                    <c:IconLabel Icon="save" TextColor="White" FontSize="{Binding c20,Source={x:Static vm:calc.i}}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                </Grid>
+                                <Label Text="Trang dữ liệu cũ" FontSize="{Binding c14,Source={x:Static vm:calc.i}}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White"/>
+                            </StackLayout>
+                        </c:ContentButton>
+
+                        <BoxView Color="White" HeightRequest="1" Margin="5"/>
+                    </StackLayout>                    
+                </ScrollView>
+                <BoxView HeightRequest="{Binding c1,Source={x:Static vm:calc.i}}" BackgroundColor="Red" />
+                <c:ContentButton HorizontalOptions="FillAndExpand" BackgroundColor="White" Padding="5" Margin="0" HeightRequest="{Binding c48,Source={x:Static vm:calc.i}}" x:Name="ProfileSettingButton"  Clicked="SettingPageButton_Clicked" >
+                    <StackLayout Orientation="Horizontal" Spacing="0">                        
+                        <Grid VerticalOptions="Center">
+                            <c:IconLabel Icon="cog-5" TextColor="Black" FontSize="{Binding c20,Source={x:Static vm:calc.i}}" HorizontalOptions="Center" VerticalOptions="Center" />                            
+                        </Grid>                        
+                        <Label Text="Cài đặt người dùng" FontSize="{Binding c14,Source={x:Static vm:calc.i}}" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </c:ContentButton>
+                <BoxView BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"  HeightRequest="3"  />
+                <c:ContentButton HorizontalOptions="FillAndExpand" BackgroundColor="White" Padding="5" Margin="0" HeightRequest="{Binding c48,Source={x:Static vm:calc.i}}" x:Name="DisplayOffButton" Clicked="LogoutButton_Clicked" >
+                    <StackLayout Orientation="Horizontal" Spacing="0">                        
+                        <Grid VerticalOptions="Center">
+                            <c:IconLabel Icon="logout-1" TextColor="Black" FontSize="{Binding c20,Source={x:Static vm:calc.i}}" HorizontalOptions="End" VerticalOptions="Center" />
+                        </Grid>                        
+                        <Label Text="Đăng xuất" FontSize="{Binding c14,Source={x:Static vm:calc.i}}" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </c:ContentButton>
+                <BoxView BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" HeightRequest="3" />
+
+                <c:ContentButton HorizontalOptions="FillAndExpand" BackgroundColor="White" Padding="5" Margin="0" HeightRequest="{Binding c48,Source={x:Static vm:calc.i}}" Clicked="PDSCompanyButton_Clicked">
+                    <StackLayout Orientation="Horizontal" Spacing="0">
+                        <Image Source="{local:ImageResource BomNuoc.Images.pdsolution_logo.png}" VerticalOptions="CenterAndExpand" HeightRequest="{Binding c50,Source={x:Static vm:calc.i}}" />
+                        <Label Text="Cty Giải pháp Phong Đạt" FontSize="{Binding c14,Source={x:Static vm:calc.i}}" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" />
+                    </StackLayout>
+                </c:ContentButton>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+</MasterDetailPage>

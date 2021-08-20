@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:BomNuoc;assembly=BomNuoc" 
+             x:Class="BomNuoc.Contents.MainPagePC" 
+             xmlns:converters="clr-namespace:BomNuoc.Converters;assembly=BomNuoc" 
+             xmlns:vm="clr-namespace:BomNuoc.ViewModels;assembly=BomNuoc" 
+             xmlns:c="clr-namespace:BomNuoc.Controls;assembly=BomNuoc"
+             >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:CalcConverter x:Key="calc" />
+            <converters:MarginConverter x:Key="margin" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Padding>
+        <!--<OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" Android="0, 0, 0, 0" WinPhone="0, 0, 0, 0">-->
+        <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" Android="0, 0, 0, 0">
+        </OnPlatform>
+    </ContentPage.Padding>
+    <AbsoluteLayout x:Name="TopAbsoluteLayout" Padding="0" Margin="0" >
+        <StackLayout x:Name="TopLayout" BackgroundColor="#007ACC" Orientation="Vertical" Spacing="0" AbsoluteLayout.LayoutFlags="SizeProportional" AbsoluteLayout.LayoutBounds="0,0,1,1">
+            <StackLayout Orientation="Horizontal" BackgroundColor="White" Spacing="0" VerticalOptions="Start" HeightRequest="{Binding c58,Source={x:Static vm:calc.i}}">
+               
+                    <StackLayout Orientation="Vertical" Spacing="0">
+                        <StackLayout Orientation="Horizontal" Spacing="0" VerticalOptions="StartAndExpand">
+                            <c:ContentButton BackgroundColor="Black" Padding="0" Margin="0" BorderRadius="{Binding c16,Source={x:Static vm:calc.i}}" WidthRequest="{Binding c32,Source={x:Static vm:calc.i}}" HeightRequest="{Binding c32,Source={x:Static vm:calc.i}}" Clicked="FontSizeDownButton_Clicked" x:Name="FontSizeDownButton">
+                                <c:IconLabel Icon="minus-3" TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="{Binding c24,Source={x:Static vm:calc.i}}" HorizontalOptions="Center" VerticalOptions="Center" />
+                            </c:ContentButton>
+                            <StackLayout Orientation="Horizontal" Spacing="0" x:Name="FontSizeStackLayout">
+                                <BoxView BackgroundColor="Gray" WidthRequest="3" HeightRequest="3" Margin="1,1,2,1" VerticalOptions="Center" />
+                                <!--コード側で消される-->
+                                <BoxView BackgroundColor="Gray" WidthRequest="3" HeightRequest="3" Margin="1,1,2,1" VerticalOptions="Center" />
+                                <BoxView BackgroundColor="Black" WidthRequest="4" HeightRequest="20" Margin="1" VerticalOptions="Center" />
+                                <BoxView BackgroundColor="Gray" WidthRequest="3" HeightRequest="3" Margin="1,1,2,1" VerticalOptions="Center" />
+                                <BoxView BackgroundColor="Gray" WidthRequest="3" HeightRequest="3" Margin="1,1,2,1" VerticalOptions="Center" />
+                                <BoxView BackgroundColor="Gray" WidthRequest="3" HeightRequest="3" Margin="1,1,2,1" VerticalOptions="Center" />
+                                <BoxView BackgroundColor="Gray" WidthRequest="3" HeightRequest="3" Margin="1,1,2,1" VerticalOptions="Center" />
+                                <BoxView BackgroundColor="Gray" WidthRequest="3" HeightRequest="3" Margin="1,1,2,1" VerticalOptions="Center" />
+                                <BoxView BackgroundColor="Gray" WidthRequest="3" HeightRequest="3" Margin="1,1,2,1" VerticalOptions="Center" />
+                                <BoxView BackgroundColor="Gray" WidthRequest="3" HeightRequest="3" Margin="1,1,2,1" VerticalOptions="Center" />
+                            </StackLayout>
+                            <c:ContentButton BackgroundColor="Black" Padding="0" Margin="0" BorderRadius="{Binding c16,Source={x:Static vm:calc.i}}" WidthRequest="{Binding c32,Source={x:Static vm:calc.i}}" HeightRequest="{Binding c32,Source={x:Static vm:calc.i}}" Clicked="FontSizeUpButton_Clicked" x:Name="FontSizeUpButton">
+                                <c:IconLabel Icon="plus-3" TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="{Binding c24,Source={x:Static vm:calc.i}}" HorizontalOptions="Center" VerticalOptions="Center" />
+                            </c:ContentButton>
+                        </StackLayout>
+                        <Label Text="Hợp Tác xã ...." HorizontalTextAlignment="Center" x:Name="FontSizeLabel" />
+                    </StackLayout>
+                    <BoxView BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" />
+                <c:ContentButton HorizontalOptions="End" BackgroundColor="White" Padding="5" Margin="0" HeightRequest="{Binding c58,Source={x:Static vm:calc.i}}" x:Name="ProfileSettingButton"  Clicked="ProfileSettingButton_Clicked">
+                    <StackLayout Orientation="Horizontal" Spacing="0">
+                        <Grid VerticalOptions="Center">
+                            <c:IconLabel Icon="cog-5" TextColor="Black" FontSize="{Binding c36,Source={x:Static vm:calc.i}}" HorizontalOptions="End" VerticalOptions="Center" />
+                            <!--<c:IconLabel Icon="spin5" TextColor="White" FontSize="{Binding c20,Source={x:Static vm:calc.i}}" HorizontalOptions="End" VerticalOptions="Center" />-->
+                        </Grid>
+                        <Label Text="Cài đặt người dùng" FontSize="{Binding c18,Source={x:Static vm:calc.i}}" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </c:ContentButton>
+
+                <BoxView BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" />
+
+                <c:ContentButton HorizontalOptions="End" BackgroundColor="White" Padding="5" Margin="0" HeightRequest="{Binding c58,Source={x:Static vm:calc.i}}" x:Name="DisplayOffButton" Clicked="LogoutButton_Clicked" >
+                        <StackLayout Orientation="Horizontal" Spacing="0">
+                            <Grid VerticalOptions="Center">
+                                <c:IconLabel Icon="logout-1" TextColor="Black" FontSize="{Binding c36,Source={x:Static vm:calc.i}}" HorizontalOptions="End" VerticalOptions="Center" />
+                            <!--<c:IconLabel Icon="spin5" TextColor="White" FontSize="{Binding c20,Source={x:Static vm:calc.i}}" HorizontalOptions="End" VerticalOptions="Center" />-->
+                        </Grid>
+                            <Label Text="Đăng xuất" FontSize="{Binding c18,Source={x:Static vm:calc.i}}" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                        </StackLayout>
+                    </c:ContentButton>
+                    <BoxView HorizontalOptions="End" WidthRequest="{Binding c1,Source={x:Static vm:calc.i}}" BackgroundColor="Gray" Margin="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='3,3,3,3'}" />
+               
+                <c:ContentButton HorizontalOptions="End" BackgroundColor="White" Padding="5" Margin="0" HeightRequest="{Binding c58,Source={x:Static vm:calc.i}}" Clicked="PDSCompanyButton_Clicked" >
+                        <StackLayout Orientation="Horizontal" Spacing="0">
+                        <Image Source="{local:ImageResource BomNuoc.Images.pdsolution_logo.png}" HorizontalOptions="End" HeightRequest="{Binding c50,Source={x:Static vm:calc.i}}" />
+                            <Label Text="Cty Giải pháp Phong Đạt" FontSize="{Binding c14,Source={x:Static vm:calc.i}}" HorizontalTextAlignment="Start" />
+                        </StackLayout>
+                    </c:ContentButton>
+            </StackLayout>
+            <!--End menu-->
+            <StackLayout Orientation="Horizontal" BackgroundColor="#007ACC" x:Name="PatientInfoLayout" Spacing="0" VerticalOptions="Start" HeightRequest="{Binding c43,Source={x:Static vm:calc.i}}">
+                <c:ContentButton BackgroundColor="#007ACC" Padding="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='10,5,10,5'}" Margin="0" HeightRequest="{Binding c43,Source={x:Static vm:calc.i}}" Clicked="BomNuocPage_Clicked" x:Name="Bomnuocbtn">
+                    <StackLayout Orientation="Horizontal" Spacing="0">
+                        <Grid VerticalOptions="Center" HeightRequest="{Binding c32,Source={x:Static vm:calc.i}}">
+                            <c:IconLabel Icon="water" TextColor="White" FontSize="{Binding c26,Source={x:Static vm:calc.i}}" HorizontalOptions="Center" VerticalOptions="Center" Margin="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='0,-3,0,0'}" />
+                        </Grid>
+                        <Label Text="Bươm tưới nước" FontSize="{Binding c16,Source={x:Static vm:calc.i}}" TextColor="White" VerticalTextAlignment="Center" Margin="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='5,0,0,0'}" />
+                    </StackLayout>
+                </c:ContentButton>
+                <BoxView BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" BackgroundColor="#007ACC"  Spacing="0" VerticalOptions="Start" HeightRequest="{Binding c43,Source={x:Static vm:calc.i}}">
+                <c:ContentButton BackgroundColor="#007ACC" Padding="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='10,5,10,5'}" Margin="0" HeightRequest="{Binding c43,Source={x:Static vm:calc.i}}" Clicked="PumpRecords_Clicked" x:Name="PumpRecords" >
+                    <StackLayout Orientation="Horizontal" Spacing="0">
+                        <Grid VerticalOptions="Center" HeightRequest="{Binding c32,Source={x:Static vm:calc.i}}">
+                            <c:IconLabel Icon="save" TextColor="White" FontSize="{Binding c26,Source={x:Static vm:calc.i}}" HorizontalOptions="Center" VerticalOptions="Center" Margin="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='0,-3,0,0'}" />
+                        </Grid>
+                        <Label Text="Xem dữ liệu cũ" FontSize="{Binding c16,Source={x:Static vm:calc.i}}" TextColor="White" VerticalTextAlignment="Center" Margin="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='5,0,0,0'}" />
+                    </StackLayout>
+                </c:ContentButton>
+                <BoxView BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+
+            <Grid BackgroundColor="Green" VerticalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid BackgroundColor="Green" VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Row="0" Orientation="Vertical" Spacing="0" BackgroundColor="White">                      
+                    </StackLayout>
+                    <c:PageView Grid.Row="1" x:Name="MainPageView" BackgroundColor="White" VerticalOptions="FillAndExpand" />
+                </Grid>               
+            </Grid>
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>

@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:BomNuoc.Converters;assembly=BomNuoc"
+              xmlns:vm="clr-namespace:BomNuoc.ViewModels;assembly=BomNuoc" 
+            xmlns:c="clr-namespace:BomNuoc.Controls;assembly=BomNuoc"
+                xmlns:local="clr-namespace:BomNuoc;assembly=BomNuoc" 
+             x:Class="BomNuoc.Contents.PumpControlList">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:CalcConverter x:Key="calc" />
+            <converters:MarginConverter x:Key="margin" />
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+
+    <Grid Padding="0,2,0,0" BackgroundColor="Blue" VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition>
+                <RowDefinition.Height>
+                    <OnPlatform x:TypeArguments="GridLength">
+                        <On Platform="Windows, WinPhone, UWP">Auto</On>
+                        <On Platform="Android">
+                            <OnIdiom x:TypeArguments="GridLength" Phone="0" Tablet="Auto" />
+                        </On>
+                        <On Platform="iOS">
+                            <OnIdiom x:TypeArguments="GridLength" Phone="Auto" Tablet="Auto" />
+                        </On>
+                    </OnPlatform>
+                </RowDefinition.Height>
+            </RowDefinition>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <ScrollView Orientation="Vertical" Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='3,3,3,3'}" Spacing="0">
+                <!-- Tên hợp tác xã -->
+                <StackLayout Orientation="Horizontal" Margin="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='0,0,0,6'}" >
+                    <Label x:Name="CooperativeName" Text="TÊN HỢP TÁC XÃ" TextColor="White" FontSize="{Binding c14,Source={x:Static vm:calc.i}}" />
+                    <Label x:Name="CompanyName" Text="" TextColor="White" HorizontalOptions="End" />
+                </StackLayout>
+
+
+                <!-- Cánh đồng 6 cánh đồng                 
+                Row0: Cánh đồng x 
+                Row1: Cánh đồng description 
+                Row2:Lần bươm trước kia:  Thời gian tưới  || Mức nước tưới ||     Thời lượng tưới trước đó
+                
+                Row3:Cài đặt bơm hiện tại               
+                Row4
+                                               |      10 cm 
+                                               |      |     |
+                Thời gian tưới trước đó        |      |     |
+                Mức nước tưới trước đó         |      |     |
+                Thời lượng tưới trong          |      |_____|
+                
+                Row5:       Tắt                  Tưới
+                Row6: range bar
+                -->
+
+                <ScrollView Orientation="Vertical">
+                    <Grid BackgroundColor="#FAFAD2">
+                        <Grid ColumnSpacing="0" RowSpacing="0" BackgroundColor="#FAFAD2" Padding="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource margin},ConverterParameter='2,2,2,0'}" VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
+                            <c:ItemsControl HorizontalOptions="CenterAndExpand" x:Name="FieldListView">
+                                <c:ItemsControl.ItemsPanel>
+                                    <StackLayout Orientation="Vertical" Spacing="0" BackgroundColor="#FAFAD2" />
+                                </c:ItemsControl.ItemsPanel>
+                                <c:ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid RowSpacing="0"  BackgroundColor="#FAFAD2" ColumnSpacing="{Binding c1,Source={x:Static vm:calc.i}}" VerticalOptions="CenterAndExpand">                                            
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />                                                
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="10" />
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="20" />
+                                                <RowDefinition Height="56" />
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="10" />
+                                                <RowDefinition Height="5" />
+
+                                            </Grid.RowDefinitions>
+                                            <!--Tên cánh đồng-->
+                                            <Grid Grid.Row="0"  BackgroundColor="SandyBrown">
+                                                <Label  Text="{Binding FieldInfo.FieldNameNumber}"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0" LineBreakMode="CharacterWrap" />
+                                            </Grid>
+                                            <Grid Grid.Row="1">
+                                                <Label  Text="{Binding FieldInfo.FieldDescription}"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0" LineBreakMode="CharacterWrap" />
+                                            </Grid>
+                                            <StackLayout Grid.Row="3">
+                                                <Label  Text="LẦN BƠM TRƯỚC:" FontSize="{Binding c14,Source={x:Static vm:calc.i}}"   HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Margin="0" LineBreakMode="CharacterWrap" />
+                                                <Label  Text="{Binding LastWateringDaysAgo}" FontSize="{Binding c12,Source={x:Static vm:calc.i}}"   HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Margin="0" LineBreakMode="CharacterWrap" />
+                                                <Label  Text="{Binding LastTotalWateringHours}" FontSize="{Binding c12,Source={x:Static vm:calc.i}}"   HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Margin="0" LineBreakMode="CharacterWrap" />
+                                                <Label  Text="{Binding LastWateringLevel}" FontSize="{Binding c12,Source={x:Static vm:calc.i}}"   HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Margin="0" LineBreakMode="CharacterWrap" />
+                                            </StackLayout>
+                                            
+                                            <StackLayout Grid.Row="5" Orientation="Horizontal">
+                                                <Label  Text="THÔNG SỐ LẦN BƠM HIỆN TẠI" FontSize="{Binding c12,Source={x:Static vm:calc.i}}"   HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Margin="0" LineBreakMode="CharacterWrap" />
+
+                                                <c:ContentButton  BackgroundColor="{Binding SettingButtonColor}" Margin="10,10,10,10"  IsEnabled="{Binding SettingButtonEnable}"  Clicked="TramSettingButton_Clicked">
+                                                    <StackLayout Orientation="Horizontal"  BackgroundColor="{Binding SettingButtonColor}"  >
+                                                        <Grid VerticalOptions="Center">
+                                                            <c:IconLabel Icon="cog-5" TextColor="Black" FontSize="{Binding c25,Source={x:Static vm:calc.i}}" HorizontalOptions="End" VerticalOptions="Center" />                                                  
+                                                        </Grid>
+                                                        <Label Text="Cài đặt" FontSize="{Binding c18,Source={x:Static vm:calc.i}}" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                                                    </StackLayout>
+                                                </c:ContentButton>
+                                                <Grid WidthRequest="200" />
+                                            </StackLayout>
+                                            <!--Mô tả cánh đồng-->
+                                            <Grid Grid.Row="6" BackgroundColor="Transparent">
+                                                <Grid.ColumnDefinitions>
+                                                    <!--
+                                                    <ColumnDefinition Width="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=185}" />
+                                                    <ColumnDefinition Width="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=135}" />
+                                                    -->
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=135}"  />
+                                                </Grid.ColumnDefinitions>
+                                                <StackLayout Grid.Column="0" Orientation="Vertical" VerticalOptions="Center" BackgroundColor="Transparent">
+                                                    <Label  Text="{Binding CurrentRiverLevelValue}" TextColor="Blue" FontSize="{Binding c12,Source={x:Static vm:calc.i}}"   HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Margin="0" LineBreakMode="CharacterWrap" />
+                                                    <Label  Text="{Binding CurrentWateringDurationValue}" TextColor="Blue" FontSize="{Binding c12,Source={x:Static vm:calc.i}}"   HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Margin="0" LineBreakMode="CharacterWrap" />
+                                                    <Label  Text="{Binding ACLostPhase}" TextColor="Red" FontSize="{Binding c12,Source={x:Static vm:calc.i}}"   HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Margin="0" LineBreakMode="CharacterWrap" />
+
+                                                </StackLayout>
+                                                <Grid Grid.Column="1" BackgroundColor="Transparent" >                                                    
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=25}" />
+                                                        <RowDefinition Height="135" />
+                                                        
+                                                    </Grid.RowDefinitions>
+                                                    <Label Grid.Row="0" BackgroundColor="Transparent" Text="{Binding CurrentWateringSettingLevel}" FontSize="{Binding c12,Source={x:Static vm:calc.i}}"  HorizontalTextAlignment="Center" VerticalTextAlignment="End" Margin="0" LineBreakMode="CharacterWrap" />
+                                                    <Grid   Grid.Row="1"   BackgroundColor="Transparent" VerticalOptions="Start" >
+                                                        <Label x:Name="pdsProgress" HorizontalOptions="Center" VerticalOptions="Center"  WidthRequest="40" HeightRequest="100" BackgroundColor="#D9DDDC"/>
+                                                        <Label HorizontalOptions="Center" VerticalOptions="End"  WidthRequest="40" HeightRequest="{Binding ProgressValue}"  BackgroundColor="Lime"/>
+                                                        <Label Text="{Binding CurrentWateringLevel}"  HorizontalOptions="Center" VerticalOptions="Center"  />
+                                                    </Grid>                                                    
+                                                </Grid>
+                                            </Grid>
+                                            <!--Button Cài đặt, Bơm nước-->
+                                            <Grid Grid.Row="7">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Grid  Grid.Column="0" />
+                                                <Button  Grid.Column="1" Text="TẮT" IsEnabled="{Binding StopButtonEnable}"  BackgroundColor="{Binding StopButtonColor}" TextColor="White" FontSize="{Binding c12,Source={x:Static vm:calc.i}}"  WidthRequest="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=86}"  HeightRequest="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=35}"  Clicked="StopWateringButton_Clicked"/>
+                                                <Grid  Grid.Column="2" />
+                                                <Button  Grid.Column="3"  Text="BƠM" IsEnabled="{Binding WateringButtonEnable}"   BackgroundColor="{Binding WateringButtonColor}" TextColor="White" FontSize="{Binding c12,Source={x:Static vm:calc.i}}"  WidthRequest="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=86}"  HeightRequest="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=35}" Clicked="WateringButton_Clicked"/>
+                                                <Grid  Grid.Column="4" />
+                                            </Grid>
+                                            <!--Panel seperates each field-->
+                                            <Grid Grid.Row="9">
+                                                <Grid  BackgroundColor="Blue"/>
+                                            </Grid>                                          
+                                        </Grid>
+                                    </DataTemplate>
+                                </c:ItemsControl.ItemTemplate>
+                            </c:ItemsControl>
+                        </Grid>
+                    </Grid>
+                </ScrollView>
+          </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BomNuoc;assembly=BomNuoc"
+             xmlns:vm="clr-namespace:BomNuoc.ViewModels;assembly=BomNuoc"
+             xmlns:converters="clr-namespace:BomNuoc.Converters;assembly=BomNuoc"
+             x:Class="BomNuoc.Contents.PDSInfo">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:CalcConverter x:Key="calc" />
+            <converters:MarginConverter x:Key="margin" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#FAFAD2" >
+            <Image Source="{local:ImageResource BomNuoc.Images.pdsolution_logo.png}"  HeightRequest="156" WidthRequest="156" />
+            <Label Text="Công ty TNHH Giải pháp PHONG ĐẠT"   HorizontalOptions="Center" FontSize="{Binding c20,Source={x:Static vm:calc.i}}" />
+            <Label Text="Địa chỉ: 29/12H, Đoàn Thị Điểm, P1, Q.Phú Nhuận, Tp. Hồ Chí Minh"   HorizontalOptions="Center" FontSize="{Binding c15,Source={x:Static vm:calc.i}}"/>
+            <Label Text="Email: truc.nguyen@phongdatsolutions.com"   HorizontalOptions="Center" FontSize="{Binding c15,Source={x:Static vm:calc.i}}" />
+            <Label Text="Điện thoại: 0903709055 - Nguyễn Tấn Trực"   HorizontalOptions="Center" FontSize="{Binding c15,Source={x:Static vm:calc.i}}"/>
+            <Label Text="Phần mềm điều khiển bơm nước phiên bản v1.01, Tháng 1 năm 2021"   HorizontalOptions="Center" FontSize="{Binding c15,Source={x:Static vm:calc.i}}"/>
+            <Grid HeightRequest="50"/>
+            <Label Text="Công ty chúng tôi chuyên cung cấp các hệ thống điều khiển thiết bị, điều khiển tự động, ứng dụng cho nông nghiệp và công nghiệp."   HorizontalOptions="Start" FontSize="{Binding c15,Source={x:Static vm:calc.i}}"/>
+            <Label Text="Công ty chúng tôi rất sẳn lòng tham gia thực hiện các giải pháp để ứng dụng vào đời sống để cuộc sống trở nên tốt đẹp hơn."   HorizontalOptions="Start" FontSize="{Binding c15,Source={x:Static vm:calc.i}}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

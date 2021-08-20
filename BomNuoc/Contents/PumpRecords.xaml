@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:BomNuoc.Converters;assembly=BomNuoc"
+             xmlns:vm="clr-namespace:BomNuoc.ViewModels;assembly=BomNuoc" 
+             xmlns:c="clr-namespace:BomNuoc.Controls;assembly=BomNuoc"
+             x:Class="BomNuoc.Contents.PumpRecords">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:CalcConverter x:Key="calc" />
+            <converters:MarginConverter x:Key="margin" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <Grid Padding="0,2,0,0" BackgroundColor="#FAFAD2" VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition>
+                <RowDefinition.Height>
+                    <OnPlatform x:TypeArguments="GridLength">
+                        <On Platform="Windows, WinPhone, UWP">Auto</On>
+                        <On Platform="Android">
+                            <OnIdiom x:TypeArguments="GridLength" Phone="0" Tablet="Auto" />
+                        </On>
+                        <On Platform="iOS">
+                            <OnIdiom x:TypeArguments="GridLength" Phone="Auto" Tablet="Auto" />
+                        </On>
+                    </OnPlatform>
+                </RowDefinition.Height>
+            </RowDefinition>
+            <RowDefinition Height="45" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <!-- Display menu   HeightRequest="{Binding c43,Source={x:Static vm:calc.i}} -->
+        <StackLayout  Grid.Row="1"  Orientation="Horizontal"  Spacing="0" MinimumHeightRequest="45">
+            <Label Text="Trạm điện: " VerticalTextAlignment="Center" MinimumHeightRequest="45" MinimumWidthRequest="100"/>
+            <Picker x:Name="SelectFields" VerticalOptions="Center"  BackgroundColor="White"  MinimumHeightRequest="45" WidthRequest="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=156}" SelectedIndexChanged="FieldSelected_Changed" >
+            </Picker>
+        </StackLayout>
+
+        <!--Content Data-->
+        <StackLayout Orientation="Vertical" Grid.Row="2" Spacing="0">
+            <ScrollView Orientation="Horizontal" BackgroundColor="White">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition  Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>                    
+                    <ContentView BackgroundColor="#404040" Grid.Column="0">
+                        <StackLayout Orientation="Vertical" Margin="1,0,1,0" BackgroundColor="White" Spacing="0">
+                            <Label HeightRequest="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=25}" Text="Trạm điện: " Margin="0,0,0,0" BackgroundColor="#404040" TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center" FontSize="{Binding c8,Source={x:Static vm:calc.i}}" LineBreakMode="NoWrap"/>
+                            <Label HeightRequest="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=25}" Text="Thời gian: " Margin="0,0,0,0" BackgroundColor="#FFFFFF"  HorizontalTextAlignment="End" VerticalTextAlignment="Center" FontSize="{Binding c8,Source={x:Static vm:calc.i}}" LineBreakMode="NoWrap"/>
+                            <Label HeightRequest="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=16}" Text="Thời lượng(phút): " Margin="0,0,0,0" BackgroundColor="#EEEEEE" HorizontalTextAlignment="End" VerticalTextAlignment="Center" FontSize="{Binding c8,Source={x:Static vm:calc.i}}" LineBreakMode="NoWrap"/>
+                            <Label HeightRequest="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=16}" Text="Mực nước(cm): " Margin="0,0,0,0" BackgroundColor="#FFFFFF" HorizontalTextAlignment="End" VerticalTextAlignment="Center" FontSize="{Binding c8,Source={x:Static vm:calc.i}}" LineBreakMode="NoWrap"/>
+                            <Label HeightRequest="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=25}" Text="Lưu ngày:  " Margin="0,0,0,0" BackgroundColor="#EEEEEE"  HorizontalTextAlignment="End" VerticalTextAlignment="Center" FontSize="{Binding c8,Source={x:Static vm:calc.i}}" LineBreakMode="NoWrap"/>
+                        </StackLayout>
+                    </ContentView>
+                    <Grid x:Name="WebViewGrid"  Margin="0" Padding="0" BackgroundColor="Yellow" Grid.Column="1"  HeightRequest="{Binding conv,Source={x:Static vm:calc.i},Converter={StaticResource calc},ConverterParameter=107}">
+                    </Grid>
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+        <StackLayout Grid.Row="2" BackgroundColor="#30AAAAFF" Orientation="Horizontal" x:Name="LoadingStackLayout" Padding="5,5,5,5" Spacing="5" IsVisible="False"  HorizontalOptions="End" VerticalOptions="End" Margin="5,5,5,5">
+            <ActivityIndicator Color="#111111" IsRunning="True" x:Name="LoadingActivityIndicator"/>
+            <Label Text="Đang tải dữ liệu về ..." TextColor="#111111" FontSize="{Binding c16,Source={x:Static vm:calc.i}}" x:Name="LoadingLabel"/>
+        </StackLayout>
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,357 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\BomNuoc\\BomNuoc.csproj": {}
+  },
+  "projects": {
+    "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\BomNuoc\\BomNuoc.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\BomNuoc\\BomNuoc.csproj",
+        "projectName": "BomNuoc",
+        "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\BomNuoc\\BomNuoc.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\BomNuoc\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\AssemblyService.Core\\AssemblyService.Core.csproj": {
+                "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\AssemblyService.Core\\AssemblyService.Core.csproj"
+              },
+              "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\DataFileStream.Core\\DataFileStream.Core.csproj": {
+                "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\DataFileStream.Core\\DataFileStream.Core.csproj"
+              },
+              "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\Generic\\Generic.csproj": {
+                "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\Generic\\Generic.csproj"
+              },
+              "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\MessagePack\\MessagePack.csproj": {
+                "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\MessagePack\\MessagePack.csproj"
+              },
+              "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\SQLite.Core\\SQLite.Core.csproj": {
+                "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\SQLite.Core\\SQLite.Core.csproj"
+              },
+              "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\SSLClient.Core\\SSLClient.Core.csproj": {
+                "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\SSLClient.Core\\SSLClient.Core.csproj"
+              },
+              "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net.Mobile.Core\\ZXing.Net.Mobile.Core.csproj": {
+                "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net.Mobile.Core\\ZXing.Net.Mobile.Core.csproj"
+              },
+              "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net.Mobile.Forms\\ZXing.Net.Mobile.Forms.csproj": {
+                "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net.Mobile.Forms\\ZXing.Net.Mobile.Forms.csproj"
+              },
+              "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net\\Source\\lib\\zxing.portable.csproj": {
+                "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net\\Source\\lib\\zxing.portable.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "Acr.UserDialogs": {
+              "target": "Package",
+              "version": "[6.5.1, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[2.5.0.122203, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\AssemblyService.Core\\AssemblyService.Core.csproj": {
+      "restore": {
+        "projectUniqueName": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\AssemblyService.Core\\AssemblyService.Core.csproj",
+        "projectName": "AssemblyService.Core",
+        "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\AssemblyService.Core\\AssemblyService.Core.csproj"
+      },
+      "frameworks": {
+        "portable45-net45+win8": {}
+      }
+    },
+    "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\DataFileStream.Core\\DataFileStream.Core.csproj": {
+      "restore": {
+        "projectUniqueName": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\DataFileStream.Core\\DataFileStream.Core.csproj",
+        "projectName": "DataFileStream.Core",
+        "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\DataFileStream.Core\\DataFileStream.Core.csproj"
+      },
+      "frameworks": {
+        "portable45-net45+win8": {}
+      }
+    },
+    "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\Generic\\Generic.csproj": {
+      "restore": {
+        "projectUniqueName": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\Generic\\Generic.csproj",
+        "projectName": "Generic",
+        "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\Generic\\Generic.csproj",
+        "projectJsonPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\Generic\\project.json",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\Generic\\obj\\",
+        "projectStyle": "ProjectJson",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        }
+      },
+      "frameworks": {
+        "portable45-net45+win8": {}
+      }
+    },
+    "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\MessagePack\\MessagePack.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\MessagePack\\MessagePack.csproj",
+        "projectName": "MessagePack",
+        "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\MessagePack\\MessagePack.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\MessagePack\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "System.Reflection.Emit": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Reflection.Emit.Lightweight": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Runtime.Serialization.Primitives": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Threading.Tasks.Extensions": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.ValueTuple": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\SQLite.Core\\SQLite.Core.csproj": {
+      "restore": {
+        "projectUniqueName": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\SQLite.Core\\SQLite.Core.csproj",
+        "projectName": "SQLite.Core",
+        "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\SQLite.Core\\SQLite.Core.csproj"
+      },
+      "frameworks": {
+        "portable45-net45+win8+wp8+wpa81": {}
+      }
+    },
+    "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\SSLClient.Core\\SSLClient.Core.csproj": {
+      "restore": {
+        "projectUniqueName": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\SSLClient.Core\\SSLClient.Core.csproj",
+        "projectName": "SSLClient.Core",
+        "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\SSLClient.Core\\SSLClient.Core.csproj"
+      },
+      "frameworks": {
+        "portable45-net45+win8": {}
+      }
+    },
+    "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net.Mobile.Core\\ZXing.Net.Mobile.Core.csproj": {
+      "restore": {
+        "projectUniqueName": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net.Mobile.Core\\ZXing.Net.Mobile.Core.csproj",
+        "projectName": "ZXing.Net.Mobile.Core",
+        "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net.Mobile.Core\\ZXing.Net.Mobile.Core.csproj",
+        "frameworks": {
+          "portable45-net45+win8+wp8+wpa81": {
+            "projectReferences": {
+              "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net\\Source\\lib\\zxing.portable.csproj": {
+                "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net\\Source\\lib\\zxing.portable.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "portable45-net45+win8+wp8+wpa81": {}
+      }
+    },
+    "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net.Mobile.Forms\\ZXing.Net.Mobile.Forms.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net.Mobile.Forms\\ZXing.Net.Mobile.Forms.csproj",
+        "projectName": "ZXing.Net.Mobile.Forms",
+        "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net.Mobile.Forms\\ZXing.Net.Mobile.Forms.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net.Mobile.Forms\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net.Mobile.Core\\ZXing.Net.Mobile.Core.csproj": {
+                "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net.Mobile.Core\\ZXing.Net.Mobile.Core.csproj"
+              },
+              "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net\\Source\\lib\\zxing.portable.csproj": {
+                "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net\\Source\\lib\\zxing.portable.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[2.5.0.122203, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net\\Source\\lib\\zxing.portable.csproj": {
+      "restore": {
+        "projectUniqueName": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net\\Source\\lib\\zxing.portable.csproj",
+        "projectName": "zxing.portable",
+        "projectPath": "E:\\PhongDatSolutions\\2020.7 PumpWateringController\\BomNuoc\\BomNuoc\\Library\\ZXing\\ZXing.Net\\Source\\lib\\zxing.portable.csproj"
+      },
+      "frameworks": {
+        "portable45-net45+win8+wp8+wpa81": {}
+      }
+    }
+  }
+}

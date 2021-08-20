@@ -1,0 +1,11 @@
+E:\PhongDatSolutions\2020.7 PumpWateringController\BomNuoc\BomNuoc\BomNuoc.UWP\BomNuoc.UWP.csproj;x86
+E:\PhongDatSolutions\2020.7 PumpWateringController\BomNuoc\BomNuoc\Library\DataFileStream.Core\DataFileStream.Core.csproj;neutral
+E:\PhongDatSolutions\2020.7 PumpWateringController\BomNuoc\BomNuoc\Library\DataFileStream.Core\DataFileStream.Core.csproj;neutral
+E:\PhongDatSolutions\2020.7 PumpWateringController\BomNuoc\BomNuoc\Library\DataFileStream.UWP\DataFileStream.UWP.csproj;x86
+E:\PhongDatSolutions\2020.7 PumpWateringController\BomNuoc\BomNuoc\Library\Generic\Generic.csproj;neutral
+E:\PhongDatSolutions\2020.7 PumpWateringController\BomNuoc\BomNuoc\Library\SQLite.Core\SQLite.Core.csproj;neutral
+E:\PhongDatSolutions\2020.7 PumpWateringController\BomNuoc\BomNuoc\Library\SQLite.Core\SQLite.Core.csproj;neutral
+E:\PhongDatSolutions\2020.7 PumpWateringController\BomNuoc\BomNuoc\Library\SQLite.UWP\SQLite.UWP.csproj;x86
+E:\PhongDatSolutions\2020.7 PumpWateringController\BomNuoc\BomNuoc\Library\SSLClient.Core\SSLClient.Core.csproj;neutral
+E:\PhongDatSolutions\2020.7 PumpWateringController\BomNuoc\BomNuoc\Library\SSLClient.Core\SSLClient.Core.csproj;neutral
+E:\PhongDatSolutions\2020.7 PumpWateringController\BomNuoc\BomNuoc\Library\SSLClient.UWP\SSLClient.UWP.csproj;x86

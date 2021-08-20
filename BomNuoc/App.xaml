@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:BomNuoc.ViewModels;assembly=BomNuoc"
+             xmlns:c="clr-namespace:BomNuoc.Controls;assembly=BomNuoc"
+             x:Class="BomNuoc.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="{Binding c14,Source={x:Static vm:calc.i}}"/>
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="PlaceholderColor" Value="#007ACC"/>
+                <Setter Property="FontSize" Value="{Binding c14,Source={x:Static vm:calc.i}}"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="BorderRadius" Value="{Binding c8,Source={x:Static vm:calc.i}}"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="TextColor" Value="#007ACC"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="BorderColor" Value="#007ACC"/>
+                <Setter Property="BorderWidth" Value="{Binding c3,Source={x:Static vm:calc.i}}"/>
+                <Setter Property="HeightRequest" Value="{Binding c42,Source={x:Static vm:calc.i}}"/>
+                <Setter Property="FontSize" Value="{Binding c16,Source={x:Static vm:calc.i}}"/>
+            </Style>
+            <Style TargetType="c:TaggedButton">
+                <Setter Property="BorderRadius" Value="{Binding c8,Source={x:Static vm:calc.i}}"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="TextColor" Value="#007ACC"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="BorderColor" Value="#007ACC"/>
+                <Setter Property="BorderWidth" Value="{Binding c3,Source={x:Static vm:calc.i}}"/>
+                <Setter Property="HeightRequest" Value="{Binding c36,Source={x:Static vm:calc.i}}"/>
+                <Setter Property="FontSize" Value="{Binding c16,Source={x:Static vm:calc.i}}"/>
+            </Style>
+            <Style TargetType="c:FlatButton">
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="BorderWidth" Value="0"/>
+                <Setter Property="FontSize" Value="{Binding c16,Source={x:Static vm:calc.i}}"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
